@@ -1,0 +1,13 @@
+<h1> Grocery List </h1>
+<%= link_to "New Item", new_grocery_path %>
+
+
+<% @groceries.each do |x| %>
+
+	<li> 
+		<%= link_to x.title, grocery_path(x.id) %>              <!-- _path is singular, refers to database  -->
+		<%= link_to "edit", edit_grocery_path(x[:id]) %>
+		<%= link_to "delete", x, method: :delete, data: { confirm: "Y/N?"} %>
+	</li>		
+
+<% end %>

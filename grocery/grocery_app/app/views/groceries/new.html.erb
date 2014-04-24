@@ -1,0 +1,15 @@
+<h1> New item </h1>
+
+<%= form_for @grocery do |f| %>
+
+	<%= label_tag(:title, "Title:") %>
+  <%= f.text_field :title %></br>
+
+  <%= label_tag(:description, "Description") %> 
+  <%= f.text_area :description %></br>
+
+  <%= label_tag(:quantity, "Quantity") %> 
+  <%= f.text_area :quantity %></br>
+
+  <%= f.submit "Create" %>
+<% end %>
