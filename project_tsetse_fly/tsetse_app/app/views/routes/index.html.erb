@@ -1,0 +1,22 @@
+<ul class="nav nav-pills">
+  <li>
+    <%= link_to('New route', new_route_path) %>
+  </li>
+</ul>
+
+
+<% @routes.each do |route| %>
+  <div class="row">
+     <div class="col-md-4 col-sm-4">
+      <p class="lead"><%= link_to(route.name, route) %>
+      <p><%= route.course %>
+      <p><%= route.cooktime %>
+      <p><%= route.servingsize %>
+      <p><%= route.instructions %>
+    </div>
+     <div class="col-md-8 col-sm-8">
+      <p><%= image_tag(route.image) %>
+    </div>
+  </div>
+<% end %>
+
