@@ -1,24 +1,31 @@
+<head>
+  <link href="app/assets/stylesheets/my_custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="app/assets/javascripts/show.js" type="text/javascript"></script>
+</head>
+
+<body>
 <ul class="nav nav-pills">
   <li><%= link_to('New route', new_route_path) %></li>
   <li><%= link_to('Edit route', edit_route_path(@route)) %></li>
+  <li><%= link_to('Index-o-routes', routes_path) %> </li> 
+
   <li><%= link_to('Delete route', @route, :method => :delete, :confirm => 'Are you sure?') %></li>
   <div class='spacer'></div>
 </ul>
 
 <div class="row">
   <div class="col-md-5 col-sm-5">
-    <p class="lead"><%= @route.name %></p>
-    <%= image_tag(@route.image) %>
+    <p class="lead">Route:</p>
+    <p><%= @route.starting_point %>  to <%= @route.end_point %> </p>
     <br>
-    <h5 id="instructions-title">Instructions:</h5>
-    <p class="instructions"><%= @route.instructions %></p>
   </div>
+</div> 
 
-<!--   <div class="col-md-7 col-sm-7">
-    <% @stations.each #do |station| %>
-      <%= station.name %>
-      <%= image_tag(station.image,  #size: "40x40") %>
-    <% #end %>
-  </div> -->
- </div>
+
+<!-- ADD MAP OF ROUTE BELOW HERE -->
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<div id="map"></div>
+
+</body>
 

@@ -1,8 +1,8 @@
 class RoutesController < ApplicationController
 	include RoutesHelper
 
-	before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
-  before_filter :check_route_owner, only: [:edit, :update, :destroy]
+	# before_filter :signed_in_user, only: [:create, :new, :edit, :update, :destroy]
+ #  before_filter :check_route_owner, only: [:edit, :update, :destroy]
 
   def index
     @routes = Route.all
@@ -13,13 +13,14 @@ class RoutesController < ApplicationController
   end
 
   def create
-    route = Route.create recipe_params
+    route = Route.create route_params
     redirect_to(route)
   end
 
   def show
     @route = Route.find(params[:id])
     @stations = @route.stations
+    # render :show
   end
 
   def edit
@@ -35,7 +36,7 @@ class RoutesController < ApplicationController
   def destroy
     route = Route.find(params[:id])
     route.delete
-    redirect_to(route_path)
+    redirect_to(routes_path)
   end
 
   private

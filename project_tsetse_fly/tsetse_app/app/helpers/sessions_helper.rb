@@ -17,7 +17,7 @@ module SessionsHelper
   end
 
   # Authorization: signed_in_user is called in a before_filter
-  # callback in each controller, see books/ingredients/recipe controllers
+  # callback in each controller
   # Ensures access to create/edit functions on if signed in.
   def signed_in_user
     unless signed_in?

@@ -1,0 +1,8 @@
+  <!-- <div class="input-group">
+    <% #Station.order(#:name).each #do |station| %>
+      <span class="input-group-addon"><%= station.name %>
+      <%= check_box_tag #'route[station_ids][]', station.id, station.in?(@route.stations.to_a), {class: "checkbox inline"} %>
+      </span>
+    <% #end %>
+  </div>
+-->

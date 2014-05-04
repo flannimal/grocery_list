@@ -1,0 +1,55 @@
+Searching 122 files for "new route"
+
+/Users/Flanagan/project_tsetse_fly/tsetse_app/app/views/routes/index.html.erb:
+    1  <ul class="nav nav-pills">
+    2    <li>
+    3:     <%= link_to('New route', new_route_path) %>
+    4    </li>
+    5  </ul>
+
+/Users/Flanagan/project_tsetse_fly/tsetse_app/app/views/routes/new.html.erb:
+    1: <h1>New route</h1>
+    2  <%= render :partial => 'form' %>
+    3  
+
+/Users/Flanagan/project_tsetse_fly/tsetse_app/app/views/routes/show.html.erb:
+    1  <ul class="nav nav-pills">
+    2:   <li><%= link_to('New route', new_route_path) %></li>
+    3    <li><%= link_to('Edit route', edit_route_path(@route)) %></li>
+    4    <li><%= link_to('Delete route', @route, :method => :delete, :confirm => 'Are you sure?') %></li>
+
+3 matches across 3 files
+
+
+Searching 123 files for "recipe_params"
+
+/Users/Flanagan/project_tsetse_fly/tsetse_app/app/controllers/routes_controller.rb:
+   14  
+   15    def create
+   16:     route = Route.create recipe_params
+   17      redirect_to(route)
+   18    end
+
+1 match in 1 file
+
+
+Searching 123 files for "recipe"
+
+/Users/Flanagan/project_tsetse_fly/tsetse_app/app/helpers/sessions_helper.rb:
+   18  
+   19    # Authorization: signed_in_user is called in a before_filter
+   20:   # callback in each controller, see books/ingredients/recipe controllers
+   21    # Ensures access to create/edit functions on if signed in.
+   22    def signed_in_user
+
+1 match in 1 file
+
+
+Searching 123 files for "recipe"
+
+0 matches across 0 files
+
+
+Searching 123 files for "ingredient"
+
+0 matches across 0 files

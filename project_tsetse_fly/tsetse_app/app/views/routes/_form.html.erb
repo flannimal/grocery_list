@@ -1,0 +1,12 @@
+<%= form_for @route do |f| %>
+  <%= f.label :starting_point %>
+  <%= f.text_field :starting_point, :autofocus => true %>
+  <br>
+  <%= f.label :end_point %>
+  <%= f.text_field :end_point %>
+  <br>
+
+  <p><p>
+  <%= f.submit  class: "btn btn-primary" %>
+<% end %>
+
